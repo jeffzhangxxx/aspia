@@ -52,7 +52,6 @@ jobs:
         if: matrix.arch != 'amd64_arm64'
         with:
           arch: ${{ matrix.msvc_arch }}
-          toolset: 14.44
 
       # Install WDK (hosted image lacks UMDF header wudfwdm.h)
       - name: Install WDK
