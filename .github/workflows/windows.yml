@@ -58,7 +58,7 @@ jobs:
       - name: Install WDK
         shell: pwsh
         run: |
-          winget install --id Microsoft.WindowsWDK.10 --exact --silent --accept-package-agreements --accept-source-agreements
+          winget install --id Microsoft.WindowsWDK.10.0 --version 10.1.26100.2454 --exact --silent --accept-package-agreements --accept-source-agreements
 
       # Cache vcpkg binary packages so reruns skip heavy Qt6 builds
       - name: Cache vcpkg binaries
