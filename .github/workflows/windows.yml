@@ -1,6 +1,7 @@
 name: windows
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -27,13 +28,9 @@ jobs:
       fail-fast: true
       matrix:
         os: [win11]
-        arch: [x86, x64]
-        build_type: [release, debug]
+        arch: [x64]
+        build_type: [release]
         include:
-          - os: win11
-            arch: x86
-            triplet: x86-windows-static
-            msvc_arch: amd64_x86
           - os: win11
             arch: x64
             triplet: x64-windows-static
